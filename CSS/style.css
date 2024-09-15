@@ -119,6 +119,7 @@ body {
 
     .menu-toggle {
         display: block;
+        margin-right: 12px;
     }
     .nav-links a:hover {
         background: #f0f0ff29;
