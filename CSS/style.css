@@ -333,6 +333,54 @@ body {
 
 /* |||||||||||||||||||||||||||||||||------------ends------------||||||||||||||||||||||||||||||||| */
 
+
+/* |||||||||||||||||||||||||||||||||------------section 2 starts here------------||||||||||||||||||||||||||||||||| */
+
+.section-2{
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-us{
+    width: 90%;
+}
+
+.cont{
+    padding: 0 8px;
+}
+
+.about{
+    display: block;
+    content: "";
+    width: 15.1rem;
+    height: 4px;
+    background-color: rgba(149, 149, 149, 0.7);
+    margin: 6rem auto 2.4rem;
+    line-height: 5rem;
+    letter-spacing: 10px;
+    font-weight: bolder;
+    margin-bottom: 7rem;
+}
+
+.about-text{
+    margin: 4rem 4rem;
+    margin-top: 7rem;
+    font-size: 19px;
+    text-align: justify;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    
+}
+@media screen and (max-width: 768px) {
+    .about-text {
+        margin: 1rem;
+        margin-top: 3rem;
+    }
+}
+
+/* |||||||||||||||||||||||||||||||||------------ends------------||||||||||||||||||||||||||||||||| */
 .content {
     background-color: white;
     position: relative;
