@@ -59,21 +59,39 @@ body {
     height: 100px;
 }
 
-.nav-links a {
-    height: 100%;
-    padding: 0 20px;
+.nav-links p{
     display: flex;
+    height: 100%;
     align-items: center;
+}
+
+.nav-links a {
+    position: relative;
+    color: white; /* Text color */
     text-decoration: none;
-    color: white;
+    padding: 0 20px;
 }
 
 .nav-links a:hover {
-    background: #0000002e;
-    text-decoration: underline;
-    text-decoration-color: #f90203;
-    text-underline-offset: 4vh;
-    text-decoration-thickness: 0.4em;
+    color: white; /* Keeping text color the same on hover */
+}
+
+.nav-links a::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 70%; /* Adjust underline width (e.g., 70% of the text width) */
+    height: 0.2em; /* Underline thickness */
+    bottom: -0.2em; /* Adjust underline offset (distance from the text) */
+    left: 50%;
+    background-color: #000000; /* Underline color */
+    transform: translateX(-50%) scaleX(0); /* Center and scale the underline */
+    transform-origin: center; /* Ensure the scaling is from the center */
+    transition: transform 0.3s ease;
+}
+
+.nav-links a:hover::before {
+    transform: translateX(-50%) scaleX(1); /* Expand the underline from the center */
 }
 
 .menu-toggle {
