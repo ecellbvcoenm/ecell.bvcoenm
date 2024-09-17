@@ -1,8 +1,10 @@
 document.addEventListener('DOMContentLoaded', function () {
     const menuToggle = document.querySelector('.menu-toggle');
-    const navLinks = document.querySelector('.nav-links');
+    const navLinks = document.querySelector('.nav-links-menu');
     const svgMenu = document.getElementById('svg-menu');
-
+    const navbar = document.querySelector('.navbar');
+    const navbarHeight = navbar.offsetHeight;
+    const stickyOffset = navbar.offsetTop;
     let toggler = false;
 
     const paths = {
@@ -14,6 +16,10 @@ document.addEventListener('DOMContentLoaded', function () {
         toggler = !toggler;
         navLinks.classList.toggle('active');
         svgMenu.setAttribute('d', toggler ? paths.open : paths.close);
+        navLinks.style.top = `${navbarHeight}px`;
+        if(!navbar.classList.contains('sticky')){
+            navbar.classList.toggle('isticky');
+        }
     });
 });
 
