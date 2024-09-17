@@ -24,29 +24,9 @@ document.addEventListener('DOMContentLoaded', function () {
     // Get the height of the navbar
     const navbarHeight = navbar.offsetHeight;
     
-    // Use the height in CSS or JavaScript calculations
+    // Select the full-screen background element
     const fullScreenBackground = document.querySelector('.full-screen-background');
-    fullScreenBackground.style.height = `calc(100vh + ${navbarHeight}px)`; 
+
+    // Set margin-top to ensure it appears directly under the navbar
     fullScreenBackground.style.marginTop = `-${navbarHeight}px`;
-
 });
-// document.addEventListener("DOMContentLoaded", function () {
-//     const mediaQuery = window.matchMedia("(max-width: 768px)");
-
-//     // Function to handle changes based on the media query result
-//     function handleMediaQueryChange(e) {
-//         if (e.matches) {
-//             // If the screen width is less than 768px
-//             document.getElementById("section-1-p-tag").textContent = "Educating entrepreneurs for the world.";
-//         } else {
-//             // If the screen width is greater than or equal to 768px
-//             document.getElementById("section-1-p-tag").textContent = "Turn to bright solutions and elevate your décor with ceiling lights. Educating entrepreneurs for the world.";
-//         }
-//     }
-
-//     // Initial check when the page loads
-//     handleMediaQueryChange(mediaQuery);
-
-//     // Add an event listener to detect changes to the media query
-//     mediaQuery.addEventListener("change", handleMediaQueryChange);
-// });
