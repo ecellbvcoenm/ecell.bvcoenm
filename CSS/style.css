@@ -15,6 +15,7 @@ body {
     background-repeat: no-repeat;
     z-index: 0;
     height: 100vh;
+    overflow-x: hidden;
 }
 
 /*  |||||||||||||||||||||||||||||||||------------navbar styling------------||||||||||||||||||||||||||||||||| */
@@ -159,10 +160,6 @@ body {
 
     .nav-links a:hover {
         background: #f0f0ff29;
-        text-decoration: underline;
-        text-decoration-color: #f90203;
-        text-underline-offset: 1vh;
-        text-decoration-thickness: 0.2em;
         z-index: 1000;
     }
 }
@@ -211,9 +208,25 @@ body {
     color: white;
     border: 1px solid white;
 }
-
+.vertical-rule{
+    background-color: white;
+    margin-left: 12px;
+    width: 4px;
+    height: 64px;
+    margin-bottom: 12px;
+}
+.social-links{
+    display: flex;
+    flex-direction: column;
+    margin-left: 12px;
+}
+.social-links svg{
+    margin-bottom: 12px;
+}
 @media screen and (max-width: 768px) {
-
+    .social-links{
+        margin-top: 18px;
+    }
     .section-1-layer-1 p {
         margin-bottom: 8px;
         font-size: 1em;
@@ -237,7 +250,13 @@ body {
         margin-bottom: 8px;
         font-size: 1em;
     }
-
+    .social-links svg{
+        height: 22px;
+        width: 22px;
+    }
+    .social-links{
+        margin-top: 48px;
+    }
     .section-1-layer-1 h1 {
         margin-bottom: 8px;
         font-size: 1.2em;
