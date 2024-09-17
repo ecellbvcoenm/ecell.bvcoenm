@@ -30,3 +30,20 @@ document.addEventListener('DOMContentLoaded', function () {
     // Set margin-top to ensure it appears directly under the navbar
     fullScreenBackground.style.marginTop = `-${navbarHeight}px`;
 });
+
+document.addEventListener('DOMContentLoaded', function () {
+    const navbar = document.querySelector('.navbar');
+    const stickyOffset = navbar.offsetTop; // Get the distance of the navbar from the top of the document
+    
+    // Function to add/remove sticky class based on scroll position
+    function handleStickyNavbar() {
+        if (window.pageYOffset >= stickyOffset) {
+            navbar.classList.add('sticky');
+        } else {
+            navbar.classList.remove('sticky');
+        }
+    }
+    
+    // Attach the scroll event to handle the sticky behavior
+    window.addEventListener('scroll', handleStickyNavbar);
+});

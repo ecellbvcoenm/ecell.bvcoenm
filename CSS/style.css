@@ -2,7 +2,7 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-    border: 1px solid yellow;
+    /* border: 1px solid yellow; */
 }
 
 body {
@@ -25,7 +25,9 @@ body {
     padding: 0 5px;
     position: sticky;
     top: 0;
-    z-index: 500;
+    z-index: 1000;
+    background-color: transparent;
+    transition: background-color 0.3s ease;
 }
 
 #logo {
@@ -83,6 +85,13 @@ body {
     cursor: pointer;
 }
 
+/* Sticky navbar style (when the navbar is sticky) */
+.navbar.sticky {
+    background-color: rgba(0, 0, 0, 0.426);
+    backdrop-filter: blur(8px);
+    z-index: 1000;
+}
+
 /* |||||||||||||||||||||||||||||||||------------ends------------||||||||||||||||||||||||||||||||| */
 
 
@@ -91,26 +100,27 @@ body {
 /* media querries for nav bar mobile view */
 @media screen and (max-width: 768px) {
     .nav-links {
-        z-index: 1000;
+        z-index: 1100;
         display: none;
         position: absolute;
         top: 100%;
         left: 0;
         right: 0;
-        background-color: rgba(0, 0, 0, 0.426);
-        backdrop-filter: blur(6px);
         flex-direction: column;
         transition: all 0.3s ease;
-    }
+        background-color: rgba(0, 0, 0, 0.426);
+     }
+
     .menu-toggle {
         display: block;
         margin-right: 12px;
         z-index: 1000;
     }
-    
+
     .nav-links.active {
         display: flex;
         z-index: 9999;
+       
     }
 
     .nav-links li {
@@ -135,7 +145,7 @@ body {
         text-decoration-color: #f90203;
         text-underline-offset: 1vh;
         text-decoration-thickness: 0.2em;
-        z-index: 1000; 
+        z-index: 1000;
     }
 }
 
