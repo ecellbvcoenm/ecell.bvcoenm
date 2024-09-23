@@ -13,7 +13,6 @@ body {
     background-image: url("../Assets/banner1.jpg");
     background-size: cover;
     background-repeat: no-repeat;
-    z-index: 0;
     height: 100vh;
     overflow-x: hidden;
 }
