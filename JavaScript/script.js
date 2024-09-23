@@ -47,6 +47,7 @@ document.addEventListener('DOMContentLoaded', function () {
     function handleStickyNavbar() {
         if (window.scrollY > stickyOffset) {
             navbar.classList.add('sticky');
+            navbar.classList.add('isticky');
         } else {
             navbar.classList.remove('sticky');
         }
