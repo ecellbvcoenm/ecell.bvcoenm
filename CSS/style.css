@@ -164,6 +164,7 @@ body {
         background-color: white;
     }
     .navbar.sticky {
+        background-color: black;
         z-index: 1000;
     }
     .navbar.isticky {
